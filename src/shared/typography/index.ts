@@ -1,12 +1,23 @@
+import { device } from '@/utils';
 import styled from 'styled-components';
 
 export const HeadingXL = styled.h1`
+  display: none;
+  color: var(--very-light-grey);
   font-family: var(--font-league-spartans);
-  font-size: 250px;
   font-style: normal;
   font-weight: 700;
   line-height: 200px;
   letter-spacing: -5px;
+
+  @media ${device.md} {
+    display: block;
+    font-size: 120px;
+  }
+
+  @media ${device.lg} {
+    font-size: 250px;
+  }
 `;
 
 export const HeadingL = styled.h2`

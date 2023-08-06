@@ -1,9 +1,10 @@
-import Image from 'next/image'
+'use client';
+import { HeadingXL } from '@/shared';
 
 export default function Home() {
   return (
     <main>
-      Arch
+      <HeadingXL>Arch Studio</HeadingXL>
     </main>
-  )
+  );
 }
