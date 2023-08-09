@@ -1,3 +1,4 @@
+'use client';
 export const size = {
   xs: '320px',
   sm: '375px',

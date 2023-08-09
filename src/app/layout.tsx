@@ -1,4 +1,6 @@
-import './globals.css';
+import './global.css';
+import { Footer, Nav } from '@/components';
+import StyledComponentsRegistry from '../lib/registry';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
@@ -59,7 +61,13 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/arch-favicon.svg" sizes="any" />
       </head>
-      <body>{children}</body>
+      <body>
+        <StyledComponentsRegistry>
+          <Nav />
+          {children}
+          <Footer />
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }

@@ -1,8 +1,10 @@
-:root {
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+}
 
+:root {
   /* colors */
   --very-dark-blue: #1b1d23;
   --dark-grey: #60636d;

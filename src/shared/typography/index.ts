@@ -1,3 +1,4 @@
+'use client';
 import { device } from '@/utils';
 import styled from 'styled-components';
 

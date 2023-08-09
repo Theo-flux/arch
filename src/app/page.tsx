@@ -1,10 +1,10 @@
 'use client';
-import { HeadingXL } from '@/shared';
+import { HomeContainer } from '@/containers';
 
 export default function Home() {
   return (
     <main>
-      <HeadingXL>Arch Studio</HeadingXL>
+      <HomeContainer />
     </main>
   );
 }
