@@ -3,6 +3,9 @@ import { Footer, Nav } from '@/components';
 import StyledComponentsRegistry from '../lib/registry';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import gsap, { CSSPlugin } from 'gsap';
+
+gsap.registerPlugin(CSSPlugin);
 
 const spartans = localFont({
   src: [
