@@ -1,8 +1,13 @@
-import { HeadingL } from '@/shared';
+'use client';
 import React from 'react';
+import { About } from '@/components';
 
 function HomeContainer() {
-  return <div>Home</div>;
+  return (
+    <main>
+      <About />
+    </main>
+  );
 }
 
 export default HomeContainer;
