@@ -1,5 +1,5 @@
 'use-client';
-import { device } from '@/utils';
+import { device, transition } from '@/utils';
 import Link from 'next/link';
 import { BodyText } from '@/shared';
 import styled from 'styled-components';
@@ -92,6 +92,7 @@ export const Backdrop = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   margin-bottom: 0.75rem;
+  ${transition}
 
   &:last-of-type {
     margin-bottom: 0rem;
@@ -109,6 +110,10 @@ export const StyledLinkText = styled(BodyText)`
   font-style: normal;
   font-weight: 700;
   line-height: 40px;
+
+  &:hover {
+    color: var(--very-dark-blue);
+  }
 
   @media ${device.md} {
     color: var(--medium-grey);

@@ -28,7 +28,7 @@ export const Overlay = styled.div`
   left: 0px;
   width: 100%;
   height: 100%;
-  background-color: #00000070;
+  background-color: #00000050;
 `;
 
 export const InfoBox = styled.div`

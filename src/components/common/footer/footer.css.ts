@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import { BodyText } from '@/shared';
-import { device } from '@/utils';
+import { device, transition } from '@/utils';
 
 export const FooterTag = styled.footer`
   width: 100%;
@@ -79,6 +79,7 @@ export const FooterItems = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   margin-bottom: 2rem;
+  ${transition}
 
   @media ${device.xl} {
     margin-left: 4rem;
@@ -91,6 +92,10 @@ export const StyledLinkText = styled(BodyText)`
   font-size: 18px;
   font-weight: 700px;
   line-height: 25px;
+
+  &:hover {
+    color: var(--very-dark-blue);
+  }
 `;
 
 export const ButtonPod = styled.div`

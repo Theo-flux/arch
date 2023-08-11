@@ -1,6 +1,6 @@
 'use client';
 import React, { useLayoutEffect, useState, useRef } from 'react';
-import { Section, NavTag, ArchBlackLogo } from '@/shared';
+import { NavSection, NavTag, ArchBlackLogo } from '@/shared';
 import {
   NavWrapper,
   NavItems,
@@ -83,7 +83,7 @@ function Nav() {
   });
 
   return (
-    <Section>
+    <NavSection>
       <Hanger>
         <Line></Line>
         <CurrentPage>HOME</CurrentPage>
@@ -117,7 +117,7 @@ function Nav() {
         </NavWrapper>
       </NavTag>
       <Backdrop ref={backdropRef}></Backdrop>
-    </Section>
+    </NavSection>
   );
 }
 
