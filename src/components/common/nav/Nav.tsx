@@ -3,7 +3,8 @@ import React, { useLayoutEffect, useState, useRef } from 'react';
 import { NavSection, NavTag, ArchBlackLogo } from '@/shared';
 import {
   NavWrapper,
-  NavItems,
+  DesktopNavItems,
+  MobileNavItems,
   Hanger,
   Line,
   CurrentPage,
@@ -13,10 +14,8 @@ import {
   Backdrop,
 } from './nav.css';
 import { gsap, Power4 } from 'gsap';
-import { useMediaQuery } from 'react-responsive';
 
 function Nav() {
-  const isDesktopOrLaptop = useMediaQuery({ maxWidth: 768 });
   const [openNav, setOpenNav] = useState(false);
   const backdropRef = useRef(null);
   const navItemsRef = useRef(null);
@@ -77,9 +76,7 @@ function Nav() {
   };
 
   useLayoutEffect(() => {
-    if (isDesktopOrLaptop) {
-      openNav ? openAnimation() : closeAnimation();
-    }
+    openNav ? openAnimation() : closeAnimation();
   });
 
   return (
@@ -92,30 +89,41 @@ function Nav() {
         <NavWrapper>
           <ArchBlackLogo />
 
-          <NavItems ref={navItemsRef}>
-            <StyledLink
-              href={'/'}
-              ref={(el: HTMLAnchorElement) => navItems.current.push(el)}
-            >
+          <DesktopNavItems>
+            <StyledLink href={'/'}>
               <StyledLinkText>Portfolio</StyledLinkText>
             </StyledLink>
-            <StyledLink
-              href={'/'}
-              ref={(el: HTMLAnchorElement) => navItems.current.push(el)}
-            >
+            <StyledLink href={'/'}>
               <StyledLinkText>About us</StyledLinkText>
             </StyledLink>
-            <StyledLink
-              href={'/'}
-              ref={(el: HTMLAnchorElement) => navItems.current.push(el)}
-            >
+            <StyledLink href={'/'}>
               <StyledLinkText>Contact</StyledLinkText>
             </StyledLink>
-          </NavItems>
+          </DesktopNavItems>
 
           <StyledMenu onClick={handleOpenNav} />
         </NavWrapper>
       </NavTag>
+      <MobileNavItems ref={navItemsRef}>
+        <StyledLink
+          href={'/'}
+          ref={(el: HTMLAnchorElement) => navItems.current.push(el)}
+        >
+          <StyledLinkText>Portfolio</StyledLinkText>
+        </StyledLink>
+        <StyledLink
+          href={'/'}
+          ref={(el: HTMLAnchorElement) => navItems.current.push(el)}
+        >
+          <StyledLinkText>About us</StyledLinkText>
+        </StyledLink>
+        <StyledLink
+          href={'/'}
+          ref={(el: HTMLAnchorElement) => navItems.current.push(el)}
+        >
+          <StyledLinkText>Contact</StyledLinkText>
+        </StyledLink>
+      </MobileNavItems>
       <Backdrop ref={backdropRef}></Backdrop>
     </NavSection>
   );

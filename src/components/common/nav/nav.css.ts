@@ -20,16 +20,15 @@ export const NavWrapper = styled.div`
 
 export const Hanger = styled.div`
   display: none;
-  position: absolute;
-  z-index: 5;
+  z-index: 12;
   left: 10px;
-  /* border: 1px solid magenta; */
   display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   @media ${device.xl} {
+    position: absolute;
     display: flex;
   }
 `;
@@ -50,8 +49,22 @@ export const CurrentPage = styled.p`
   letter-spacing: 18px;
 `;
 
-export const NavItems = styled.div`
-  position: absolute;
+export const DesktopNavItems = styled.div`
+  display: none;
+
+  @media ${device.md} {
+    display: flex;
+    padding: 0rem;
+    width: auto;
+    background-color: transparent;
+    position: static;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+export const MobileNavItems = styled.div`
+  position: fixed;
   top: 60px;
   right: -800px;
   width: 95%;
@@ -63,15 +76,8 @@ export const NavItems = styled.div`
   padding: 2rem;
   background-color: var(--very-light-grey);
 
-  /* border: 1px solid magenta; */
-
   @media ${device.md} {
-    padding: 0rem;
-    width: auto;
-    background-color: transparent;
-    position: static;
-    flex-direction: row;
-    justify-content: space-between;
+    display: none;
   }
 `;
 
