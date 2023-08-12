@@ -15,11 +15,14 @@ export const Inner = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
-  margin-top: 6rem;
   width: 85%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media ${device.lg} {
+    margin-top: 6rem;
+  }
 `;
 
 export const InfoBox = styled.div`

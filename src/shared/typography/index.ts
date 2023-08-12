@@ -23,11 +23,17 @@ export const HeadingXL = styled.h1`
 
 export const HeadingL = styled.h2`
   font-family: var(--font-league-spartans);
-  font-size: 96px;
+  font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 80px;
-  letter-spacing: -2px;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+
+  @media ${device.md} {
+    font-size: 96px;
+    line-height: 80px;
+    letter-spacing: -2px;
+  }
 `;
 
 export const HeadingM = styled.h3`

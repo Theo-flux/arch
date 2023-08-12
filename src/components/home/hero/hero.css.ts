@@ -1,14 +1,15 @@
-import { HeadingM, DivTag } from '@/shared';
+import { HeadingL, DivTag, BodyText } from '@/shared';
 import { device } from '@/utils';
 import styled from 'styled-components';
 
-export const AboutTag = styled(DivTag)`
+export const HeroTag = styled(DivTag)`
   position: relative;
   height: 560px;
   width: 100%;
 
   @media ${device.md} {
     width: 90%;
+    height: 720px;
   }
 `;
 
@@ -51,10 +52,20 @@ export const InfoBox = styled.div`
   }
 `;
 
-export const InfoText = styled(HeadingM)`
+export const Title = styled(HeadingL)`
   width: 300px;
   color: #fff;
   margin-bottom: 1rem;
+
+  @media ${device.md} {
+    width: 544px;
+  }
+`;
+
+export const Text = styled(BodyText)`
+  color: white;
+  width: 100%;
+  margin-bottom: 2rem;
 
   @media ${device.md} {
     width: 445px;
