@@ -23,13 +23,13 @@ function Footer() {
 
           <FooterRow>
             <FooterItems>
-              <StyledLink href={'/'}>
+              <StyledLink href={'/portfolio'}>
                 <StyledLinkText>Portfolio</StyledLinkText>
               </StyledLink>
-              <StyledLink href={'/'}>
+              <StyledLink href={'/about'}>
                 <StyledLinkText>About us</StyledLinkText>
               </StyledLink>
-              <StyledLink href={'/'}>
+              <StyledLink href={'/contact'}>
                 <StyledLinkText>Contact</StyledLinkText>
               </StyledLink>
             </FooterItems>

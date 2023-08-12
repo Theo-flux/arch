@@ -7,12 +7,21 @@ export const HeroSection = styled(Section)`
 `;
 
 export const HeroTag = styled(DivTag)`
-  position: relative;
   height: 560px;
   width: 100%;
 
   @media ${device.md} {
     width: 90%;
+    height: 720px;
+  }
+`;
+
+export const SwiperTag = styled.div`
+  position: relative;
+  height: 560px;
+  width: 100%;
+
+  @media ${device.md} {
     height: 720px;
   }
 `;

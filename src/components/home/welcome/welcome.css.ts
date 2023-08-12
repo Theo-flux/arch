@@ -15,13 +15,14 @@ export const Inner = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
-  width: 85%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media ${device.lg} {
     margin-top: 6rem;
+    width: 85%;
   }
 `;
 
