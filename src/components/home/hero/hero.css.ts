@@ -1,6 +1,10 @@
-import { HeadingL, DivTag, BodyText } from '@/shared';
+import { HeadingL, DivTag, BodyText, Section } from '@/shared';
 import { device } from '@/utils';
 import styled from 'styled-components';
+
+export const HeroSection = styled(Section)`
+  position: relative;
+`;
 
 export const HeroTag = styled(DivTag)`
   position: relative;
