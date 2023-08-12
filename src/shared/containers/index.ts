@@ -7,7 +7,11 @@ export const Section = styled.section`
   padding: 4rem 0;
 `;
 
-export const DivTag = styled.div``;
+export const DivTag = styled.div`
+  width: 90%;
+  max-width: 1110px;
+  margin: 0 auto;
+`;
 
 export const NavSection = styled.section`
   width: 100%;
@@ -15,6 +19,6 @@ export const NavSection = styled.section`
 
 export const NavTag = styled.nav`
   width: 90%;
-  max-width: 1440px;
+  max-width: 1110px;
   margin: 0 auto;
 `;

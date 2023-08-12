@@ -2,12 +2,6 @@ import { BodyText, HeadingM, HeadingS, HeadingXL } from '@/shared';
 import { device } from '@/utils';
 import styled from 'styled-components';
 
-export const FeaturedContainer = styled.div`
-  width: 95%;
-  max-width: 1440px;
-  margin: 0 auto;
-`;
-
 export const FeaturedTopInner = styled.div`
   display: flex;
   justify-content: space-between;

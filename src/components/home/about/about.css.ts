@@ -1,12 +1,9 @@
-import { HeadingM } from '@/shared';
+import { HeadingM, DivTag } from '@/shared';
 import { device } from '@/utils';
 import styled from 'styled-components';
 
-export const AboutTag = styled.div`
+export const AboutTag = styled(DivTag)`
   position: relative;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
   height: 560px;
 `;
 
@@ -41,11 +38,11 @@ export const InfoBox = styled.div`
   padding: 0 2rem;
 
   @media ${device.md} {
-    padding: 0 8rem;
+    padding: 0 6rem;
   }
 
   @media ${device.lg} {
-    padding: 0 17rem;
+    padding: 0 12.5rem;
   }
 `;
 

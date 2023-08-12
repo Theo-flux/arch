@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { BodyText } from '@/shared';
+import { DivTag, BodyText } from '@/shared';
 import { device, transition } from '@/utils';
 
-export const FooterTag = styled.footer`
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
+export const FooterTag = styled(DivTag)`
   position: relative;
 `;
 
@@ -68,7 +65,7 @@ export const FooterItems = styled.div`
   height: 100%;
 
   @media ${device.xl} {
-    width: 80%;
+    width: 60%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -82,7 +79,7 @@ export const StyledLink = styled(Link)`
   ${transition}
 
   @media ${device.xl} {
-    margin-left: 4rem;
+    margin-left: 3rem;
     margin-bottom: 0rem;
   }
 `;

@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { ButtonIcon, Section } from '@/shared';
+import { ButtonIcon, Section, DivTag } from '@/shared';
 import {
-  FeaturedContainer,
   FeaturedTopInner,
   FeaturedBottomInner,
   Title,
@@ -19,7 +18,7 @@ import {
 function Featured() {
   return (
     <Section>
-      <FeaturedContainer>
+      <DivTag>
         <FeaturedTopInner>
           <Title>Feature</Title>
           <ButtonIcon text="See All" />
@@ -61,7 +60,7 @@ function Featured() {
         <FeaturedBottomInner>
           <ButtonIcon text="See All" />
         </FeaturedBottomInner>
-      </FeaturedContainer>
+      </DivTag>
     </Section>
   );
 }

@@ -21,7 +21,7 @@ export const NavWrapper = styled.div`
 export const Hanger = styled.div`
   display: none;
   z-index: 12;
-  left: 10px;
+  left: 50px;
   display: none;
   flex-direction: column;
   justify-content: center;
