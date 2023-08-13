@@ -20,8 +20,7 @@ function Heritage() {
         <Inner>
           <InfoWrapper>
             <InfoBox>
-              <Text>Our</Text>
-              <Text>Heritage</Text>
+              <Text>Our Heritage</Text>
               <SmallText>
                 Founded in 2007, we started as a trio of architects. Our
                 complimentary skills and relentless attention to detail turned
