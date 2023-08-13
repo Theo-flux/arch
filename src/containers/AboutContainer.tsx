@@ -1,8 +1,15 @@
 'use client';
 import React from 'react';
+import { AboutHero, Heritage, Leaders } from '@/components';
 
 function AboutContainer() {
-  return <main>About us</main>;
+  return (
+    <main>
+      <AboutHero />
+      <Heritage />
+      <Leaders />
+    </main>
+  );
 }
 
 export default AboutContainer;
