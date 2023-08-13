@@ -20,18 +20,18 @@ function Hero() {
       <AboutTag>
         <Wrapper>
           <Figure>
-            <Img src={'/images/about_hero.png'} alt="about image" />
+            <Img src={'/images/contact_hero.png'} alt="contact image" />
             <Overlay></Overlay>
           </Figure>
-          <Title>About</Title>
+          <Title>Contact</Title>
           <InfoWrapper>
             <InfoBox>
-              <Text>Your team of professionals</Text>
+              <Text>Tell us about your project</Text>
               <SmallText>
-                Our small team of world-class professionals will work with you
-                every step of the way. Strong relationships are at the core of
-                everything we do. This extends to the relationship our projects
-                have with their surroundings.
+                We’d love to hear more about your project. Please, leave a
+                message below or give us a call. We have two offices, one in
+                Texas and one in Tennessee. If you find yourself nearby, come
+                say hello!
               </SmallText>
             </InfoBox>
           </InfoWrapper>

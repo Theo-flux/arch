@@ -9,7 +9,7 @@ export const HeadingXL = styled.h1`
   font-style: normal;
   font-weight: 700;
   line-height: 200px;
-  letter-spacing: -5px;
+  letter-spacing: -3px;
 
   @media ${device.md} {
     display: block;
@@ -18,6 +18,7 @@ export const HeadingXL = styled.h1`
 
   @media ${device.lg} {
     font-size: 250px;
+    letter-spacing: -5px;
   }
 `;
 
