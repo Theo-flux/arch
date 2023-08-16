@@ -12,3 +12,11 @@ export const ButtonIcon = ({ text }: IBtnprops) => {
     </ButtonIconContainer>
   );
 };
+
+export const IconButton = () => {
+  return (
+    <ButtonIconContainer>
+      <StyledArrowIcon />
+    </ButtonIconContainer>
+  );
+};

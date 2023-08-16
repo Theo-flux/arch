@@ -1,11 +1,12 @@
 'use client';
 import React from 'react';
-import { ContactHero } from '@/components';
+import { ContactHero, Email } from '@/components';
 
 function ContactContainer() {
   return (
     <main>
       <ContactHero />
+      <Email />
     </main>
   );
 }
