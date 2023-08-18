@@ -43,10 +43,46 @@ export const AddressTitle = styled.p`
   line-height: 35px;
 `;
 
-export const AddressInfo = styled.p`
+export const AddressInfo = styled.div`
   color: #60636d;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+`;
+
+export const SelectorText = styled.p`
+  color: #1b1d23;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  margin-right: 1rem;
+`;
+
+export const MapSelector = styled.div`
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  margin-top: 3rem;
+
+  &:hover ${SelectorText} {
+    text-decoration: underline;
+  }
+`;
+
+export const MapBox = styled.div`
+  width: 100%;
+  max-width: 1110px;
+  margin: 5rem auto 0rem auto;
+  height: 367px;
+  /* border: 1px solid magenta; */
+  overflow: hidden;
+
+  @media ${device.md} {
+    height: 560px;
+  }
 `;

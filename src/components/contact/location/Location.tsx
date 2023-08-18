@@ -1,15 +1,29 @@
 'use client';
 import React from 'react';
-import { Section, DivTag } from '@/shared';
+import { Icon } from 'leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Section, DivTag, StyledArrowIcon } from '@/shared';
 import {
   Inner,
   Text,
   AdrressBox,
   AddressTitle,
   AddressInfo,
+  MapSelector,
+  SelectorText,
+  MapBox,
 } from './location.css';
 
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow
+});
+L.Marker.prototype.options.icon = DefaultIcon;
+
 function Location() {
+  const position = [51.505, -0.09];
   return (
     <Section>
       <DivTag>
@@ -22,6 +36,11 @@ function Location() {
               <p>Address : 1892 Chenoweth Drive TN</p>
               <p>Phone : 123-456-3451</p>
             </AddressInfo>
+
+            <MapSelector>
+              <SelectorText>View on Map</SelectorText>
+              <StyledArrowIcon />
+            </MapSelector>
           </AdrressBox>
           <AdrressBox>
             <AddressTitle>Office II</AddressTitle>
@@ -30,9 +49,26 @@ function Location() {
               <p>Address : 3399 Wines Lane TX</p>
               <p>Phone : 832-123-4321</p>
             </AddressInfo>
+            <MapSelector>
+              <SelectorText>View on Map</SelectorText>
+              <StyledArrowIcon />
+            </MapSelector>
           </AdrressBox>
         </Inner>
       </DivTag>
+      <MapBox>
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
+      </MapBox>
     </Section>
   );
 }
