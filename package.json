@@ -17,6 +17,7 @@
     "@types/node": "20.4.8",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
+    "@types/react-leaflet": "^3.0.0",
     "@types/styled-components": "^5.1.26",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",

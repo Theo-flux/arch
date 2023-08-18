@@ -14,16 +14,8 @@ import {
   MapBox,
 } from './location.css';
 
-import icon from 'leaflet/dist/images/marker-icon.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
-let DefaultIcon = L.icon({
-    iconUrl: icon,
-    shadowUrl: iconShadow
-});
-L.Marker.prototype.options.icon = DefaultIcon;
-
 function Location() {
-  const position = [51.505, -0.09];
+  const position = { lat: 51.505, lng: -0.09 };
   return (
     <Section>
       <DivTag>
