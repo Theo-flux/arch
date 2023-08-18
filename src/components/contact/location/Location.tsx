@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Section, DivTag, StyledArrowIcon } from '@/shared';
 import {
@@ -12,9 +12,21 @@ import {
   SelectorText,
   MapBox,
 } from './location.css';
+import L from 'leaflet';
 
 function Location() {
-  const position = { lat: 51.505, lng: -0.09 };
+  const positionOne = { lat: 36.59679, lng: -87.28701 };
+  const positionTwo = { lat: 32.958481, lng: -96.256332 };
+
+  var markerIcon = L.icon({
+    iconUrl: '/images/pop_pin.svg',
+    iconSize: [38, 95],
+    shadowSize: [50, 64],
+    iconAnchor: [22, 94],
+    shadowAnchor: [4, 62],
+    popupAnchor: [-3, -76],
+  });
+
   return (
     <Section>
       <DivTag>
@@ -49,15 +61,17 @@ function Location() {
       </DivTag>
       <MapBox>
         {typeof window !== 'undefined' && (
-          <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+          <MapContainer center={positionTwo} zoom={5} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
+            <Marker icon={markerIcon} position={positionOne}>
+              <Popup>Main Office</Popup>
+            </Marker>
+
+            <Marker icon={markerIcon} position={positionTwo}>
+              <Popup>Office II</Popup>
             </Marker>
           </MapContainer>
         )}
